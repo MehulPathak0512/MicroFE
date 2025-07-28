@@ -2,16 +2,19 @@
   "name": "mf-currency-exchange",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "concurrently \"vite build --watch\" \"vite preview --port 3002 --strictPort\"",
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
+    "@originjs/vite-plugin-federation": "^1.4.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "concurrently": "^9.2.0",
     "sass": "^1.70.0",
-    "vite-plugin-federation": "^1.3.4"
+    "vite": "^5.0.0"
   }
 }
